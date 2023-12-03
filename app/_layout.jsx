@@ -15,12 +15,14 @@ export default function _layout() {
         name="screen/loginscreen"
         options={{
           title: "Login",
+          headerShown: true,
         }}
       />
       <Stack.Screen
         name="screen/registerscreen"
         options={{
           title: "Register",
+          headerShown: true,
         }}
       />
     </Stack>
