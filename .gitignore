@@ -39,3 +39,5 @@ yarn-error.*
 
 expo-env.d.ts
 # @end expo-cli
+
+/Users/White/Desktop/project-x/ecommerce-app/api/index.js
