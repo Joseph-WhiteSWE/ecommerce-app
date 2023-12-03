@@ -6,7 +6,7 @@ import { Link } from "expo-router";
 export default function Index() {
   return (
     <View className="flex-1 justify-center items-center">
-      <Text>Hello World!</Text>
+      <Text>Hello User!</Text>
       <Link href="/screen/registerscreen" asChild>
         <Button title="Open Register Screen" />
       </Link>
