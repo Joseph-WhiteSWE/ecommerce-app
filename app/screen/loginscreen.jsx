@@ -8,9 +8,11 @@ import {
 } from "react-native";
 import { MaterialIcons } from "@expo/vector-icons";
 import { Entypo } from "@expo/vector-icons";
-import React from "react";
+import React, { useState } from "react";
 
 export default function LoginScreen() {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   return (
     <SafeAreaView className="flex-1 bg-white items-center">
       <View>
@@ -38,7 +40,9 @@ export default function LoginScreen() {
           >
             <MaterialIcons name="email" size={24} color="gray" />
             <TextInput
-              style={{ color: "black", width: 300 }}
+              value={email}
+              onChangeText={text => setEmail(text)}
+              style={{ color: "black", width: 300, fontSize: email ? 16 : 16 }}
               placeholder="enter your email"
               placeholderTextColor="gray"
               className=" text-black my-2.5"
@@ -46,12 +50,19 @@ export default function LoginScreen() {
           </View>
           <View>
             <View
-              className="flex-row items-center gap-x-1 rounded mt-16"
+              className="flex-row items-center gap-x-1 rounded mt-10"
               style={{ backgroundColor: "#D0D0D0" }}
             >
               <Entypo name="lock" size={24} color="gray" />
               <TextInput
-                style={{ color: "black", width: 300 }}
+                value={password}
+                onChangeText={text => setPassword(text)}
+                secureTextEntry={true}
+                style={{
+                  color: "black",
+                  width: 300,
+                  fontSize: email ? 16 : 16,
+                }}
                 placeholder="enter your password"
                 placeholderTextColor="gray"
                 className=" text-black my-2.5"
