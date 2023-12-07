@@ -5,10 +5,12 @@ import {
   Image,
   KeyboardAvoidingView,
   TextInput,
+  TouchableOpacity,
 } from "react-native";
 import { MaterialIcons } from "@expo/vector-icons";
 import { Entypo } from "@expo/vector-icons";
 import React, { useState } from "react";
+import { Link } from "expo-router";
 
 export default function LoginScreen() {
   const [email, setEmail] = useState("");
@@ -35,7 +37,7 @@ export default function LoginScreen() {
 
         <View>
           <View
-            className="flex-row items-center gap-x-1 rounded mt-20"
+            className="flex-row items-center gap-x-1 rounded mt-10"
             style={{ backgroundColor: "#D0D0D0" }}
           >
             <MaterialIcons name="email" size={24} color="gray" />
@@ -70,6 +72,40 @@ export default function LoginScreen() {
             </View>
           </View>
         </View>
+        <View className="flex-row justify-between items-center mt-4">
+          <Text style={{ fontWeight: "500" }}>Keep me logged in</Text>
+          <Text style={{ color: "#007fff", fontWeight: "500" }}>
+            Forgot Password
+          </Text>
+        </View>
+        <View className="mt-16" />
+        <TouchableOpacity
+          style={{
+            width: 200,
+            backgroundColor: "#febe10",
+            borderRadius: 6,
+            marginLeft: "auto",
+            marginRight: "auto",
+            padding: 15,
+          }}
+        >
+          <Text
+            className="text-center text-white font-bold"
+            style={{ fontSize: 16 }}
+          >
+            Login
+          </Text>
+        </TouchableOpacity>
+        <TouchableOpacity className="mt-5">
+          <Link href="/screen/registerscreen" asChild>
+            <Text
+              style={{ fontSize: 16 }}
+              className="text-center text-gray-500"
+            >
+              Don't have an account? Sign up
+            </Text>
+          </Link>
+        </TouchableOpacity>
       </KeyboardAvoidingView>
     </SafeAreaView>
   );

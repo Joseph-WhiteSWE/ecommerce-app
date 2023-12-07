@@ -8,21 +8,28 @@ export default function _layout() {
       <Stack.Screen
         name="index"
         options={{
-          title: "Home",
+          title: "Landing Page",
         }}
       />
       <Stack.Screen
         name="screen/loginscreen"
         options={{
           title: "Login",
-          headerShown: false,
+          // headerShown: false,
         }}
       />
       <Stack.Screen
         name="screen/registerscreen"
         options={{
           title: "Register",
-          headerShown: false,
+          // headerShown: false,
+        }}
+      />
+      <Stack.Screen
+        name="screen/homescreen"
+        options={{
+          title: "Home",
+          // headerShown: false,
         }}
       />
     </Stack>
