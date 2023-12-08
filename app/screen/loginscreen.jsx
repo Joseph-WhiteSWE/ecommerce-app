@@ -5,7 +5,7 @@ import {
   Image,
   KeyboardAvoidingView,
   TextInput,
-  TouchableOpacity,
+  Pressable,
 } from "react-native";
 import { MaterialIcons } from "@expo/vector-icons";
 import { Entypo } from "@expo/vector-icons";
@@ -79,33 +79,35 @@ export default function LoginScreen() {
           </Text>
         </View>
         <View className="mt-16" />
-        <TouchableOpacity
-          style={{
-            width: 200,
-            backgroundColor: "#febe10",
-            borderRadius: 6,
-            marginLeft: "auto",
-            marginRight: "auto",
-            padding: 15,
-          }}
-        >
-          <Text
-            className="text-center text-white font-bold"
-            style={{ fontSize: 16 }}
+        <Link href="/screen/homescreen" asChild>
+          <Pressable
+            style={{
+              width: 200,
+              backgroundColor: "#febe10",
+              borderRadius: 6,
+              marginLeft: "auto",
+              marginRight: "auto",
+              padding: 15,
+            }}
           >
-            Login
-          </Text>
-        </TouchableOpacity>
-        <TouchableOpacity className="mt-5">
-          <Link href="/screen/registerscreen" asChild>
+            <Text
+              className="text-center text-white font-bold"
+              style={{ fontSize: 16 }}
+            >
+              Login
+            </Text>
+          </Pressable>
+        </Link>
+        <Link href="/screen/registerscreen" asChild>
+          <Pressable className="mt-5">
             <Text
               style={{ fontSize: 16 }}
               className="text-center text-gray-500"
             >
               Don't have an account? Sign up
             </Text>
-          </Link>
-        </TouchableOpacity>
+          </Pressable>
+        </Link>
       </KeyboardAvoidingView>
     </SafeAreaView>
   );

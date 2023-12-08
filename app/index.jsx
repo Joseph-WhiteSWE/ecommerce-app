@@ -1,4 +1,4 @@
-import { View, Text, Button, Image, TouchableOpacity } from "react-native";
+import { View, Text, Button, Image, Pressable } from "react-native";
 import React from "react";
 import { StatusBar } from "expo-status-bar";
 import { Link, useRouter } from "expo-router";
@@ -18,7 +18,7 @@ export default function Index() {
       </View>
 
       <Link href="/screen/loginscreen" asChild>
-        <TouchableOpacity
+        <Pressable
           style={{
             width: 200,
             backgroundColor: "#1e293b",
@@ -35,11 +35,11 @@ export default function Index() {
           >
             Login
           </Text>
-        </TouchableOpacity>
+        </Pressable>
       </Link>
 
       <Link href="/screen/homescreen" asChild>
-        <TouchableOpacity
+        <Pressable
           style={{
             width: 200,
             backgroundColor: "#1e293b",
@@ -54,9 +54,9 @@ export default function Index() {
             className="text-center text-white font-bold"
             style={{ fontSize: 16 }}
           >
-            Enter without Login
+            Login as Guest
           </Text>
-        </TouchableOpacity>
+        </Pressable>
       </Link>
     </View>
   );
